@@ -2,11 +2,14 @@
 
 <suite name="Sample Project Suite">
 	 <listeners>
-		<listener class-name="com.report.baseclass.ListenerTest"></listener>
+		<listener class-name="com.qa.baseclass.ListenerTest"></listener>
 	</listeners> 
 	<test name="Sample Project Test">
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="wait" value="20"></parameter>
+	<parameter name="url" value="https://www.w3schools.com/"></parameter>
 		<classes>
-			<class name="com.report.qa.TestClass" />
+			<class name="com.qa.tests.SampleTest" />
 		</classes>
 	</test>
 </suite>
