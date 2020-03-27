@@ -1,5 +1,0 @@
-set projectLocation = C:\Users\Sowndharya\workspace\SampleProjectTest
-cd %projectLocation%
-set classpath=%projectLocation%\bin;%projectLocation%\lib\*
-java org.testng.TestNG %projectLocation%\testSuite.xml
-pause
