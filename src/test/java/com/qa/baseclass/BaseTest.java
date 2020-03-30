@@ -16,7 +16,7 @@ public class BaseTest {
 	private ExtentHtmlReporter htmlReporter;
 	@BeforeTest(alwaysRun = true)
 	public void setReport() throws Exception {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/reports/test-report.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "./reports/test-report.html");
 		htmlReporter.config().setDocumentTitle("Automation Report");
 		htmlReporter.config().setReportName("Functional Execution Report");
 		htmlReporter.config().setTheme(Theme.DARK);

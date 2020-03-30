@@ -37,7 +37,7 @@ public class ListenerTest implements ITestListener {
 		test.log(Status.FAIL, "Test failed: " + testResult.getName());
 		test.log(Status.FAIL, "Test failed with exception: " + testResult.getThrowable());
 		try {
-			test.addScreenCaptureFromPath(getScreenshotPath(testResult.getName()));
+			test.addScreenCaptureFromPath("."+getScreenshotPath(testResult.getName()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -57,7 +57,7 @@ public class ListenerTest implements ITestListener {
 
 	public String getScreenshotPath(String testName) throws IOException {
 		File screenshotSource = ((TakesScreenshot) baseTest.getDriver()).getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir")+"\\screenshots\\" + testName + "-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".png";
+		String destination = "./reports/screenshots/" + testName + "-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".png";
 		FileUtils.copyFile(screenshotSource, new File(destination));
 		return destination;
 	}
