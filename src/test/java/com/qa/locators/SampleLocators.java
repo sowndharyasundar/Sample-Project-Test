@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class SampleLocators {
 	public By tutorialsDropdown() {
-		return By.xpath("//a[@id='navbtn_tutorials']/i[contains(@class,'fa-caret-down')]");
+		return By.xpath("//a[@id='navbtn_tutorials']/i[contains(@class,'fa-caret-dow')]");
 	}
 
 	public By tutorialLink(String courseSection,String courseName) {
